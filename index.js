@@ -5,6 +5,10 @@ const PORT = 8080;
 // MIDDLEWARE TO PARSE JSON AUTOMATICALLY
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Selamat datang di API");
+});
+
 app.get("/tshirt", (req, res) => {
   res.status(200).send({
     tshirt: "Uniqlo Airism",
